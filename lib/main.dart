@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  const String _name = 'Tryo Asnafi';
+void main() => runApp(MaterialApp(
+  home: Home(),
+));
 
-  runApp(MaterialApp(
-    home: Scaffold(
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Center(
           child: Text(
             'Learn Layouting App',
           ),
         ),
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.green,
       ),
       body: Center(
         child: Text(
-          'Hello, $_name! How are you?',
+          'Hello, Tryo Asnafi! \n How are you?',
           style: TextStyle(
-              color: Colors.blueAccent,
-              fontSize: 28.0,
+              color: Colors.grey[700],
+              fontSize: 18.0,
               fontFamily: 'Langar',
               shadows: [
                 Shadow(
@@ -33,8 +36,8 @@ void main() {
       // backgroundColor: Colors.blue,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text('Click'),
+        child: Text('Click Me!'),
       ),
-    ),
-  ));
+    );
+  }
 }
