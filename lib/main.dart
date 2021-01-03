@@ -9,34 +9,28 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Learn Layouting App',
-          ),
+        centerTitle: true,
+        title: Text(
+          'Learn Layouting App',
+        ),
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('assets/img/logo-polbeng.png'),
         ),
         backgroundColor: Colors.green,
       ),
       body: Center(
-        child: Text(
-          'Hello, Tryo Asnafi! \n How are you?',
-          style: TextStyle(
-              color: Colors.grey[700],
-              fontSize: 18.0,
-              fontFamily: 'Langar',
-              shadows: [
-                Shadow(
-                  color: Colors.grey[600],
-                  offset: Offset(-4.0, 4.0),
-                  blurRadius: 8.0,
-                ),
-              ]),
-          textAlign: TextAlign.center,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Image.network('https://pbs.twimg.com/profile_images/1295732034279813123/ykLQzTnJ.png'),
         ),
       ),
       // backgroundColor: Colors.blue,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text('Click Me!'),
+        child: Text(
+          'click'
+        ),
       ),
     );
   }
